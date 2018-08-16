@@ -1,4 +1,4 @@
-function drawShape() {
+/*function drawShape() {
             
             // get the canvas element using the DOM
             var canvas = document.getElementById('mycanvas');
@@ -19,7 +19,6 @@ function drawShape() {
                alert('You need Safari or Firefox 1.5+ to see this demo.');
             }
          }
-};
 
 var map = null;
 function showlocation() {
@@ -52,13 +51,23 @@ function initMap() {
         };
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
       
-}
+}*/
 
-function hideQuestions() {
-    var x = document.getElementById("jsonquestions");
+function hideQuestions(id) {
+    //var x = document.getElementById(id);
+	var x = id;
+	
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
         x.style.display = "none";
     }
 } 
+
+function hideDivQuestionsByDefault(){
+	var x = document.getElementsByTagName("div");
+	var i;
+	for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	}
+}

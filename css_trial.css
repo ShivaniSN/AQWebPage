@@ -23,15 +23,16 @@ input[type=reset] {
 article{
 	background-color: #edf9f8;
 	margin : 5px;
-	padding: 10px 10px;
+	padding: 5px 5px;
 	border: 1px solid #51CABB;
 }
 article section{
 	background-color: #ffffff;
-	margin : 5px;
+	margin : 7px;
 	padding: 10px 20px;
 	border: 1px solid #dedede;
 	border-radius: 8px;
+	box-shadow: 3px 3px #dedede;
 }
 form{
 	background-color: #F8F4F5;
@@ -68,10 +69,10 @@ footer img{
   height: 80px;
   display:inline-block;
 }
-table{
+/*table{
     border-collapse: collapse;
 	width: 100%;
-}
+}*/
 th, td {
 	border: 1px solid black;
 	 text-align: left;

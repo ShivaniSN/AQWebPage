@@ -8,7 +8,7 @@
 	  <script type="text/javascript" src="js_trial.js" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
    </head> 
   
-   <body bgcolor = "#f9f9f9" onload = "drawShape();"> 
+   <body bgcolor = "#f9f9f9" onload = "hideDivQuestionsByDefault()"> 
       <center><header role = "banner">
 		 <img src="logo.png" alt="Android Questionnaire"/>	  
          <h1><font color = "#ffffff" style="font-family:Helvetica";>Android Questionnaire</font></h1> 
@@ -26,10 +26,10 @@
 			</font></center>
 		</section>		
          <section> 
-            <h3 onclick = "hideQuestions()">
-				<font color = "#E2617D"><b> Android - JSON Related Questions </b></font>
+            <h3 onclick = "hideQuestions(div_jsonquestions)" >
+				<font color = "#E2617D" style="text-shadow:4px 4px 8px grey;"><b> JSON  Questions </b></font>
 			</h3> 
-			<div id = "jsonquestions">
+			<div id = "div_jsonquestions">
 				<ol type = "1">
 					<b><li> What is JSON?</li></b>
 					JSON is a simple data exchange format.  JSON means JavaScript Object Notation. It is language and platform independent.
@@ -53,27 +53,27 @@
 						<tr>
 							<td> Definition </td>
 							<td> It is faster and lighter than XML as on the wire data format </td>
-							<td> XML data is typeless while JSON objects are typed <td>
+							<td> XML data is typeless while JSON objects are typed </td>
 						</tr>
 						<tr>
 							<td> Data Types </td>
 							<td> Number, Array, Boolean, String </td>
-							<td> String <td>
+							<td> String </td>
 						</tr>
 						<tr>
 							<td> Fetching Data  </td>
 							<td> Data is readily available as JSON object is in your JavaScript </td>
-							<td> Fetching values is as simple as reading from an object property in your JavaScript code <td>
+							<td> Fetching values is as simple as reading from an object property in your JavaScript code </td>
 						</tr>
 					</table>
 				</ol>
 			</div>
          </section>
 		 <section> 
-            <h3 onclick = "hideQuestions()">
-				<font color = "#E2617D"><b> Android - Fragment Related Questions </b></font>
+            <h3 onclick = "hideQuestions(div_fragmentquestions)" >
+				<font color = "#E2617D" style="text-shadow:4px 4px 8px grey;"><b> Fragment Questions </b></font>
 			</h3>
-			<div id = "jsonquestions">
+			<div id = "div_fragmentquestions">
 				<ol type = "1">
 					<b><li> What is fragment ??</li></b>
 					A fragment is usually used as part of an activity's user interface and contributes its own layout to the activity.
@@ -144,7 +144,9 @@
    
    </body> 
 </html> 
-<!--<canvas id = "mycanvas"></canvas>
+<!--
+Add onload = "drawShape();" to body for svg shape.
+<canvas id = "mycanvas"></canvas>
       <nav> 
          <ul> 
             <li><a href = "https://www.tutorialspoint.com/html">HTML Tutorial</a></li> 
