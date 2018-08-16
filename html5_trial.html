@@ -1,0 +1,164 @@
+<!DOCTYPE html>  
+
+<html>  
+   <head> 
+      <meta charset = "utf-8"> 
+      <title>Android Questionnaire</title> 
+	  <link rel="stylesheet" href="css_trial.css" media = "all">
+	  <script type="text/javascript" src="js_trial.js" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+   </head> 
+  
+   <body bgcolor = "#f9f9f9" onload = "drawShape();"> 
+      <center><header role = "banner">
+		 <img src="logo.png" alt="Android Questionnaire"/>	  
+         <h1><font color = "#ffffff" style="font-family:Helvetica";>Android Questionnaire</font></h1> 
+         <p><font color = "#ffffff" style="font-family:Helvetica";>Here to give you solutions</font></p> 
+      </header> </center>
+	  <article>
+		<font style="font-family:Helvetica;font-size:15px;">	
+		<section>
+			<center>
+			<font color = "#ABC051">
+				<h4> This article contains some questions that i encountered in the interviews that i gave uptil now.<br>
+					These questions are for experienced android developers but will be of help to all of you.<br>
+					Hope these help you out. Leave your suggestions in the comment section below.<br>
+				</h4>
+			</font></center>
+		</section>		
+         <section> 
+            <h3 onclick = "hideQuestions()">
+				<font color = "#E2617D"><b> Android - JSON Related Questions </b></font>
+			</h3> 
+			<div id = "jsonquestions">
+				<ol type = "1">
+					<b><li> What is JSON?</li></b>
+					JSON is a simple data exchange format.  JSON means JavaScript Object Notation. It is language and platform independent.
+					<br><br>
+					<b><li>What is the rule for JSON syntax rules? Give an example of JSON object? </li></b>
+					JSON syntax is a set of the JavaScript object notation syntax.
+						<ul>
+							<li>Data is in name/value pairs</li>
+							<li>Data is separated by comma</li>
+							<li>Curly brackets hold objects</li>
+							<li>Square bracket holds arrays</li>
+						</ul>
+					<br>
+					<b><li>Why must one use JSON over XML?</li></b>
+					<table>
+						<tr>
+							<th> Points </th>
+							<th> JSON </th>
+							<th> XML </th>
+						</tr>
+						<tr>
+							<td> Definition </td>
+							<td> It is faster and lighter than XML as on the wire data format </td>
+							<td> XML data is typeless while JSON objects are typed <td>
+						</tr>
+						<tr>
+							<td> Data Types </td>
+							<td> Number, Array, Boolean, String </td>
+							<td> String <td>
+						</tr>
+						<tr>
+							<td> Fetching Data  </td>
+							<td> Data is readily available as JSON object is in your JavaScript </td>
+							<td> Fetching values is as simple as reading from an object property in your JavaScript code <td>
+						</tr>
+					</table>
+				</ol>
+			</div>
+         </section>
+		 <section> 
+            <h3 onclick = "hideQuestions()">
+				<font color = "#E2617D"><b> Android - Fragment Related Questions </b></font>
+			</h3>
+			<div id = "jsonquestions">
+				<ol type = "1">
+					<b><li> What is fragment ??</li></b>
+					A fragment is usually used as part of an activity's user interface and contributes its own layout to the activity.
+					A Fragment represents a behavior or a portion of user interface in a FragmentActivity. You can combine multiple fragments 
+					in a single activity to build a multi-pane UI and reuse a fragment in multiple activities.A fragment must always be hosted 
+					in an activity and the fragment's lifecycle is directly affected by the host activity's lifecycle. 
+					<br><br>
+					<b><li> Fragment LifeCycle Methods :</li></b>
+						<ul>
+							<li><u>onAttach(Activity) :</u> is called only once when it is attached with activity.</li>
+							<li><u>onCreate(Bundle) :</u> it is used to initialise the fragment</li>
+							<li><u>onCreateView(LayoutInflater, ViewGroup, Bundle) :</u> creates and returns view hierarchy.</li>
+							<li><u>onActivityCreated(Bundle) :</u> it is invoked after the completion of onCreate() method.</li>
+							<li><u>onViewStateRestored(Bundle) :</u> it provides information to the fragment that all the saved state of fragment 
+								view hierarchy has been restored</li>
+							<li><u>onStart() :</u> makes the fragment visible</li>
+							<li><u>onResume() :</u> makes the fragment interactive.</li>
+							<li><u>onPause() :</u> is called when fragment is no longer interactive</li>
+							<li><u>onStop() :</u> is called when fragment is no longer visible</li>
+							<li><u>onDestroyView() :</u> it allows the fragment to clean up resources</li>
+							<li><u>onDestroy() :</u> it allows the fragment to do final clean up of fragment state</li>
+							<li><u>onDetach() :</u> it is called when the fragment is no longer associated with the activity</li>
+						</ul>
+					<br><br>
+					<b><li> How do you pass data to fragment?</li></b>
+							By using Bundle, setArguments() method.
+					<br><br>
+					<b><li>Does fragment need parameterless/default constructor ?? Why??</li></b>
+						Yes they do.<br>You shouldn't really be overriding the constructor anyway. You should have a newInstance() static method 
+						defined and pass any parameters via arguments (bundle).The reason why you should be passing parameters through bundle is 
+						because when the system restores a fragment (e.g on config change), it will automatically restore your bundle. This way you 
+						are guaranteed to restore the state of the fragment correctly to the same state the fragment was initialised with.
+					<br><br>
+					<b><li>Can you Inflate a Fragment within a Fragment ?</li></b>	
+						With current versions of the Android Support package -- or native fragments on API Level 17 and higher -- you can nest fragments, 
+						by means of getChildFragmentManager(). Note that this means that you need to use the Android Support package version of fragments
+						on API Levels 11-16, because even though there is a native version of fragments on those devices, that version does not have 
+						getChildFragmentManager().
+				</ol>
+		</font>
+      </article> 
+	<form action = "http://example.com/cgiscript.pl" method = "post" bgcolor = "#ffffff">  
+		<p><center> 
+			<font color = "#f68321">First Name: </font> 
+			<input type = "text" id = "firstname" required><br><br> 
+   
+			<font color = "#f68321">Last Name: </font> 
+			<input type = "text" id = "lastname" required><br> <br>
+   
+			<font color = "#f68321">Email: </font>
+			<input type = "email" id = "email" placeholder = "email@example.com"><br> <br>
+			
+			<font color = "#f68321">BirthDate : </font><input type = "date" id = "dob"> <br> <br>
+   
+			<input type = "radio" name = "sex" value = "male"><font color = "#f68321"> Male </font><br> <br>
+			<input type = "radio" name = "sex" value = "female"><font color = "#f68321"> Female</font><br> <br>
+			
+			<input type = "submit" value = "Send" bgcolor = "#f68321"> <input type = "Reset"> 
+		</center></p> 
+	</form> 
+      <footer role = "banner">
+		<img src="logo.png" alt="Android Questionnaire"/>	  
+         <font color = "#ffffff"style="font-family:Helvetica";><center>
+		 <p>Created by <b>Shivani Nawathe</b></p>
+		 <br>  © Copyright 2018. All Rights Reserved.
+		 </center></font> 
+      </footer> 
+   
+   </body> 
+</html> 
+<!--<canvas id = "mycanvas"></canvas>
+      <nav> 
+         <ul> 
+            <li><a href = "https://www.tutorialspoint.com/html">HTML Tutorial</a></li> 
+            <li><a href = "https://www.tutorialspoint.com/css">CSS Tutorial</a></li> 
+            <li><a href = "https://www.tutorialspoint.com/javascript">JavaScript Tutorial</a></li> 
+         </ul> 
+      </nav> 
+	<input type="button" value="Show my location on Map" onclick="showlocation()" /><br><br>
+	Latitude: <span id="latitude"></span>       <br/>
+		Longitude: <span id="longitude"></span> 
+      <aside> 
+         <p>This is  aside part of the web page</p> 
+      </aside> 
+	  This is a SVG Star.
+	  <svg id = "svgelem" height = "200" xmlns = "http://www.w3.org/2000/svg" align = "right">
+         <polygon points = "100,10 40,180 190,60 10,60 160,180" fill = "#1A87CC"/>
+      </svg>-->
