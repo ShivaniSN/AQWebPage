@@ -1,5 +1,5 @@
 input[type=submit] {
-	background-color: #f68321; /* orange */
+	background-color: #75C7D3; 
     border: none;
     color: white;
     padding: 10px 20px;
@@ -10,7 +10,7 @@ input[type=submit] {
 	border-radius: 8px;
 }
 input[type=reset] {
-	background-color: #f68321; /* orange */
+	background-color: #75C7D3; 
     border: none;
     color: white;
     padding: 10px 20px;
@@ -38,7 +38,7 @@ form{
 	background-color: #F8F4F5;
 	padding: 10px 20px;
 	margin : 20px;
-	border: 1px solid #f68321;
+	border: 1px solid #75C7D3;
 }
 #svgelem {
     position: relative;
