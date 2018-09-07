@@ -1,33 +1,33 @@
-<!DOCTYPE html>  
+<!doctype html>  
 
 <html>  
    <head> 
-      <meta charset = "utf-8"> 
+      <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1.0"> 
       <title>Android Questionnaire</title> 
 	  <link rel="stylesheet" href="css_trial.css" media = "all">
-	  <script type="text/javascript" src="js_trial.js" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	  <link rel="icon" type="image/ico" href="android-question.png" />
+	  <script type="text/javascript" src="js_trial.js"></script>
    </head> 
   
-   <body bgcolor = "#f9f9f9" onload = "hideDivQuestionsByDefault()"> 
-      <center><header role = "banner">
-		 <img src="logo.png" alt="Android Questionnaire"/>	  
-         <h1><font color = "#ffffff" style="font-family:Helvetica";>Android Questionnaire</font></h1> 
-         <p><font color = "#ffffff" style="font-family:Helvetica";>Here to give you solutions</font></p> 
-      </header> </center>
-	  <article>
-		<font style="font-family:Helvetica;font-size:15px;">	
-		<section>
-			<center>
-			<font color = "#ABC051">
-				<h4> This article contains some questions that i encountered in the interviews that i gave uptil now.<br>
-					These questions are for experienced android developers but will be of help to all of you.<br>
-					Hope these help you out. Leave your suggestions in the comment section below.<br>
-				</h4>
-			</font></center>
-		</section>		
+   <body onload = "hideDivQuestionsByDefault()"> 
+      <center>
+      	<header>
+		 <img src="android-question.png" alt="Android Questionnaire"/>	  
+         <h1>Android Questionnaire</h1>  
+      	</header> 
+      </center>
+	  <article>	
+		<!--<section>
+		<nav>
+			<ul>
+				<li> JSON  Questions </li>
+				<li> Fragment Questions </li>
+			</ul>	
+		</nav>
+		</section>	-->
          <section> 
             <h3 onclick = "hideQuestions(div_jsonquestions)" onmouseover="" style="cursor: pointer;">
-				<font color = "#E2617D" style="text-shadow:4px 4px 8px grey;"><b> JSON  Questions </b></font>
+				<b> JSON  Questions </b>
 			</h3> 
 			<div id = "div_jsonquestions">
 				<ol type = "1">
@@ -71,7 +71,7 @@
          </section>
 		 <section> 
             <h3 onclick = "hideQuestions(div_fragmentquestions)" onmouseover="" style="cursor: pointer;">
-				<font color = "#E2617D" style="text-shadow:4px 4px 8px grey;"><b> Fragment Questions </b></font>
+				<b> Fragment Questions </b>
 			</h3>
 			<div id = "div_fragmentquestions">
 				<ol type = "1">
@@ -113,35 +113,63 @@
 						on API Levels 11-16, because even though there is a native version of fragments on those devices, that version does not have 
 						getChildFragmentManager().
 				</ol>
-		</font>
+		</div>
+	</section>
+	 <section> 
+            <h3 onclick = "hideQuestions(div_lifecyclequestions)" onmouseover="" style="cursor: pointer;">
+				<b> Lifecycle Questions</b>
+			</h3> 
+			<div id = "div_lifecyclequestions">
+				<ol type = "1">
+					<b><li> How can you disable onBackPressed() ??</li></b>
+					<br><br>
+					Way 1 :
+					<br>
+					<pre><code>@Override
+public void onBackPressed() {
+	// super.onBackPressed(); commented this line in order to disable back press
+	//Write your code here
+  		Toast.makeText(getApplicationContext(), "Back press disabled!", Toast.LENGTH_SHORT).show();
+}</code></pre>
+					Way 2 :
+					<br>
+					<pre><code>@Override
+public boolean onKeyDown(int keyCode, KeyEvent event) {
+	if (keyCode == KeyEvent.KEYCODE_BACK) {
+        super.onKeyDown(keyCode, event);
+        return true;
+    }
+    return false;
+}</code></pre>
+					<br><br>
+				</ol>	
+			</div>
+		</section>
       </article> 
-	<form action = "http://example.com/cgiscript.pl" method = "post" bgcolor = "#ffffff">  
+	<form action = "http://google.com"  target="_blank" bgcolor = "#ffffff">  
 		<p><center> 
-			<font color = "#75C7D3">First Name: </font> 
-			<input type = "text" id = "firstname" required><br><br> 
+			First Name : <input type = "text" id = "firstname" required><br><br> 
    
-			<font color = "#75C7D3">Last Name: </font> 
-			<input type = "text" id = "lastname" required><br> <br>
+			Last Name :  <input type = "text" id = "lastname" required><br> <br>
    
-			<font color = "#75C7D3">Email: </font>
-			<input type = "email" id = "email" placeholder = "email@example.com"><br> <br>
+			Email : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "email" id = "email" placeholder = "email@example.com" required><br> <br>
 			
-			<font color = "#75C7D3">BirthDate : </font><input type = "date" id = "dob"> <br> <br>
+			BirthDate : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "date" id = "dob"> <br> <br>
    
-			<input type = "radio" name = "sex" value = "male"><font color = "#75C7D3"> Male </font><br> <br>
-			<input type = "radio" name = "sex" value = "female"><font color = "#75C7D3"> Female</font><br> <br>
+			<input type = "radio" name = "sex" value = "male"> Male <br> <br>
+			<input type = "radio" name = "sex" value = "female"> Female<br> <br>
 			
 			<input type = "submit" value = "Send" bgcolor = "#75C7D3"> <input type = "Reset"> 
 		</center></p> 
 	</form> 
       <footer role = "banner">
-		<img src="logo.png" alt="Android Questionnaire"/>	  
-         <font color = "#ffffff"style="font-family:Helvetica";><center>
+		<img src="android-question.png" alt="Android Questionnaire"/>
+		<img src="android-question.png" alt="Android Questionnaire" id = "rightimage"/>	  
+        <center>
 		 <p>Created by <b>Shivani Nawathe</b></p>
 		 <br>  © Copyright 2018. All Rights Reserved.
 		 </center></font> 
       </footer> 
-   
    </body> 
 </html> 
 <!--

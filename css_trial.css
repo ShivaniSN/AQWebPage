@@ -1,44 +1,142 @@
-input[type=submit] {
-	background-color: #75C7D3; 
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-	border-radius: 8px;
+/* colours used :
+	<color name="colorPrimaryDark">#241266</color>
+    <color name="colorPrimary">#655993</color>
+    <color name="colorAccent">#e9e7ef</color>
+    <color name="colorAccentLight">#f7f6f9</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+*/
+/* styling the body section */
+body {
+        font-family: Bookman Old Style;
+    background-color:#f9f9f9;
+    margin: 0;
 }
-input[type=reset] {
-	background-color: #75C7D3; 
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-	border-radius: 8px;
+/* setting background colour to header part of the page */
+header{
+    background-color: #655993;
+    padding: 10px 10px;
+        font-family: Bookman Old Style;
+    color:#f7f6f9;
 }
+/* aligining header image inheader section */
+header img{
+    float: left;
+  width: 80px;
+  height: 80px;
+  display:inline-block;
+}
+/* setting background colour to footer of the page */
+footer{
+    background-color: #655993;
+    padding: 10px 20px;
+    height: 100px;
+        font-family: Bookman Old Style;
+    color:#ffffff;
+}
+/* aligining footer image inheader section */
+footer img{
+    float: left;
+  width: 80px;
+  height: 80px;
+  display:inline-block;
+}
+#rightimage{
+    float: right;
+  width: 80px;
+  height: 80px;
+  display:inline-block;
+}
+/* styling main article body */
 article{
-	background-color: #edf9f8;
-	margin : 5px;
-	padding: 5px 5px;
-	border: 1px solid #51CABB;
+    background-color: #f9f9f9;
+    margin : 5px;
+    padding: 5px 5px;
+    border: 1px solid #655993;
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    display: block; 
 }
+/* styling individual question category sections */
 article section{
-	background-color: #ffffff;
-	margin : 7px;
-	padding: 10px 20px;
-	border: 1px solid #dedede;
-	border-radius: 8px;
-	box-shadow: 3px 3px #dedede;
+    background-color: #ffffff;
+    margin : 7px;
+    padding: 10px 20px;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    display: -webkit-flex;
+    display: flex;
 }
+/* styling the form */
 form{
-	background-color: #F8F4F5;
-	padding: 10px 20px;
-	margin : 20px;
-	border: 1px solid #75C7D3;
+    background-color: #f7f6f9;
+    padding: 10px 10px;
+    margin : 10px;
+    border: 1px solid #655993;
+    color: #655993;
+    text-align: left;
+}
+/* Background colour and rounded border to form buttons */
+input[type=submit] {
+	background-color: #655993; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	border-radius: 8px;
+    box-shadow: 3px 3px #dedede;
+}
+/* Background colour and rounded border to form buttons */
+input[type=reset] {
+	background-color: #655993; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	border-radius: 8px;
+    box-shadow: 3px 3px #dedede;
+}
+/* styling text colour of input text fields */
+input {
+    color: #655993;
+}
+/* styling the table header and rows */
+th, td {
+	border: 1px solid #655993;
+	 text-align: left;
+    padding: 5px;
+    font-size: 16px;
+}
+/* styling all question categories belonging to h3 tag */
+section h3 {
+     color:#655993;
+     text-shadow:4px 4px 8px grey;
+}
+/* styling div questions and answers */
+div {
+    font-size: 16px;
+    background-color: #e9e7ef; 
+    padding: 5px;
+    color: #241266;
+    margin: 10px;
+    box-shadow: 3px 3px #dedede;
+}
+/* styling the code section displaying the android code */
+code{
+    background-color: #ffffff;
+    text-indent: 50px;
+}
+
+/*table{
+    border-collapse: collapse;
+	width: 100%;
 }
 #svgelem {
     position: relative;
@@ -46,35 +144,4 @@ form{
     -webkit-transform: translateX(-40%);
     -ms-transform: translateX(-40%);
     transform: translateX(-40%);
-}
-header{
-	background-color: #51CABB;
-	padding: 10px 10px;
-}
-header img{
-	float: left;
-  width: 100px;
-  height: 100px;
-  display:inline-block;
-  background-color: #ffffff;
-}
-footer{
-	background-color: #51CABB;
-	padding: 10px 20px;
-	height: 100px;
-}
-footer img{
-	float: left;
-  width: 80px;
-  height: 80px;
-  display:inline-block;
-}
-/*table{
-    border-collapse: collapse;
-	width: 100%;
 }*/
-th, td {
-	border: 1px solid black;
-	 text-align: left;
-    padding: 5px;
-}
