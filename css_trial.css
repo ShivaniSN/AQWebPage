@@ -14,10 +14,11 @@ body {
 }
 /* setting background colour to header part of the page */
 header{
-    background-color: #655993;
+    /*background-color: #655993; */
     padding: 10px 10px;
         font-family: Bookman Old Style;
     color:#f7f6f9;
+	background-image: linear-gradient(to bottom right, #655993, #241266);
 }
 /* aligining header image inheader section */
 header img{
@@ -49,7 +50,7 @@ footer img{
 }
 /* styling main article body */
 article{
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     margin : 5px;
     padding: 5px 5px;
     border: 1px solid #655993;
@@ -57,6 +58,7 @@ article{
     -ms-flex: 3;
     flex: 3;
     display: block; 
+	background-image: linear-gradient(to bottom right, #f7f6f9, #e9e7ef);
 }
 /* styling individual question category sections */
 article section{
