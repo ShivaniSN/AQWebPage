@@ -1,0 +1,57 @@
+body{
+	margin : 0px;
+}
+.parallaxone {
+    /* The image used */
+    background-image: url("IMG1.jpg");
+
+    /* Set a specific height */
+    min-height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	margin : 0px;
+	overflow: hidden; 
+	position: relative;
+	font-family: Bookman Old Style;
+}
+.parallaxtwo {
+    /* The image used */
+    background-image: url("IMG2.jpg");
+
+    /* Set a specific height */
+    min-height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	margin : 0px;
+	overflow: hidden; 
+	position: relative;
+	font-family: Bookman Old Style;
+}
+header{
+	height:90px;
+	color:white;
+	margin : 0px;
+	opacity: 0.8;
+	font-size: 50px;
+}
+section {
+	margin-top : 30px;
+	margin-bottom : 30px;
+	color:#E2617D;
+	background-color:white;
+	padding:10px;
+	opacity: 0.8;
+}
+/*@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}*/
