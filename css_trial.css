@@ -6,6 +6,7 @@
     <color name="colorWhite">#ffffff</color>
     <color name="colorBlack">#000000</color>
 */
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
 /* styling the body section */
 body {
         font-family: Bookman Old Style;
@@ -67,8 +68,8 @@ article section{
     padding: 10px 20px;
     border: 1px solid #dedede;
     border-radius: 8px;
-    display: -webkit-flex;
-    display: flex;
+   /* display: -webkit-flex;
+    display: flex;*/
 }
 /* styling the form */
 form{
@@ -134,6 +135,7 @@ div {
 code{
     background-color: #ffffff;
     text-indent: 50px;
+    display: inline-block;
 }
 
 /*table{

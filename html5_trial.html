@@ -2,11 +2,13 @@
 
 <html>  
    <head> 
-      <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1.0"> 
+      <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1"> 
       <title>Android Questionnaire</title> 
 	  <link rel="stylesheet" href="css_trial.css" media = "all">
 	  <link rel="icon" type="image/ico" href="android-question.png" />
 	  <script type="text/javascript" src="js_trial.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    </head> 
   
    <body onload = "hideDivQuestionsByDefault()"> 
@@ -16,7 +18,7 @@
          <h1>Android Questionnaire</h1>  
       	</header> 
       </center>
-	  <article>	
+	  <article class = "container-fluid">	
 		<!--<section>
 		<nav>
 			<ul>
